@@ -1,0 +1,179 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .main-content {
+    flex: 1;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .navbar-left .logo {
+    width: 50px;
+  }
+  
+  .navbar-center .search-input {
+    width: 200px;
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid #333;
+  }
+  
+  .search-input {
+    position: relative;
+    width: 250px;
+  }
+  
+  .search-icon {
+    padding-right: 0.4rem;
+    align-items: center;
+    font-size: 25px;
+  }
+  
+  .navbar-right .icon {
+    margin: 0 10px;
+  }
+  
+  .category-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+    background-color: #f4f4f4;
+  }
+  
+  .category-buttons button {
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .category-buttons .active {
+    background-color: #67d976;
+    color: #fff;
+    border-radius: 8px;
+  }
+  
+  .uniform-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 4rem;
+  }
+  
+  .uniform-card {
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    background-color: #fff;
+    padding: 15px;
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
+  }
+  
+  .uniform-card button {
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(18,18,83);
+    color: #fff;
+    padding: 8px 10px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 200px;
+    margin: 10px auto;
+  }
+  
+  .uniform-card button:hover {
+    background-color: rgb(62, 5, 5);
+  }
+  
+  .uniform-image {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    border-radius: 8px;
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .uniform-heading {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  .uniform-description {
+    font-size: 1em;
+    color: #666;
+    margin: 8px 0;
+    padding: 0 10px;
+  }
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navbar-center .search-input {
+      width: 100px;
+    }
+  
+    .category-buttons {
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+  
+    .uniform-heading {
+      font-size: 1em;
+    }
+  
+    .uniform-description {
+      font-size: 0.9em;
+    }
+  
+    .uniform-image {
+      height: 200px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .uniform-card {
+      padding: 10px;
+    }
+  
+    .uniform-heading {
+      font-size: 0.9em;
+    }
+  
+    .uniform-description {
+      font-size: 0.8em;
+    }
+  
+    .uniform-card button {
+      padding: 6px 8px;
+    }
+  
+    .uniform-image {
+      height: 150px;
+    }
+  }
+  
