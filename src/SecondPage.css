@@ -18,7 +18,7 @@ body, html {
   }
   
   .navbar-left .logo {
-    width: 50px;
+    width: 100px;
   }
   
   .navbar-center .search-input {
@@ -49,19 +49,24 @@ body, html {
     justify-content: center;
     padding: 10px;
     gap: 10px;
-    background-color: #f4f4f4;
+    background-color: #fff;
+  }
+  #cat{
+    /* border: 1px solid white; */
+    border-radius: 1.5rem;
   }
   
   .category-buttons button {
     padding: 8px 12px;
-    border: none;
+    border: 1.5px solid grey;
+    background-color: transparent;
     cursor: pointer;
   }
   
   .category-buttons .active {
-    background-color: #67d976;
+    background-color: #239332;
     color: #fff;
-    border-radius: 8px;
+    border-radius: 10px;
   }
   
   .uniform-gallery {
@@ -83,8 +88,8 @@ body, html {
   }
   
   .uniform-card button {
-    border: none;
-    border-radius: 8px;
+    border: 2px solid rgb(118, 63, 118);
+    border-radius: 10px;
     background-color: rgb(18,18,83);
     color: #fff;
     padding: 8px 10px;
@@ -92,6 +97,7 @@ body, html {
     width: 100%;
     max-width: 200px;
     margin: 10px auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   }
   
   .uniform-card button:hover {
@@ -126,7 +132,7 @@ body, html {
     padding: 20px;
     background-color: #333;
     color: #fff;
-    position: fixed;
+    position: relative;
     width: 100%;
     bottom: 0;
   }
@@ -177,3 +183,91 @@ body, html {
     }
   }
   
+/*body-part*/
+.body-part{
+  display: flex;
+}
+  /*first-half*/
+  .first-half{
+    flex: 1;
+  }
+
+  /*second-half*/
+  .second-half{
+    flex: 4;
+  }
+  /* Styles for screens wider than 790px */
+@media (min-width: 790px) {
+  .body-part {
+    display: flex;
+  }
+  
+  .first-half {
+    display: block; /* Show sidebar */
+    flex: 1.5;
+    background-color: #333;
+  }
+  
+  .menu-icon {
+    display: none; /* Hide menu icon on large screens */
+  }
+  /* Close icon inside sidebar */
+.close-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: white;
+}
+}
+
+/* Styles for screens smaller than 790px */
+@media (max-width: 790px) {
+  .body-part {
+    display: flex;
+  }
+  .close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: white;
+  }
+  
+  /* Sidebar transition */
+.first-half {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Initially hidden */
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  color: white;
+  transition: left 0.3s ease; /* Smooth slide transition */
+  z-index: 1000;
+}
+
+.first-half.open {
+  left: 0; /* Move sidebar into view */
+}
+  
+  .second-half {
+    flex: 1;
+  }
+  
+  .menu-icon {
+    display: block; /* Show menu icon on small screens */
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 10px;
+  }
+}
+
+/* Nav.Item{
+  color: #fff;
+}
+*/ Nav.Link{
+  color: #fff;
+}
