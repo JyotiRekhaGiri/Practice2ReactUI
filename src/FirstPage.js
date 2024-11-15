@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import './App.css';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faHome} from "@fortawesome/free-solid-svg-icons";
+import {Nav} from "react-bootstrap";
+import { useNavigate } from 'react-router-dom';
 import { FaChevronDown, FaFacebookF, FaX, FaBars, FaSearch, FaTimes, FaLinkedin, FaInstagram, FaYoutube, FaDribbble } from 'react-icons/fa';  // Import FaTimes
 
 function FirstPage() {
@@ -22,6 +26,8 @@ function FirstPage() {
       [link]: !prevState[link],
     }));
   };
+
+  const navigate = useNavigate();
 
   const links = {
     Solutions: ['Solution 1', 'Solution 2', 'Solution 3'],
@@ -130,7 +136,7 @@ function FirstPage() {
         <div className="second">
           <div className="row">
             <div className="col-sm-6 text-card secondFirst">
-              <div className="dropdown" style={{color: "rgb(18,18,83)"}}>
+              <div className="dropdown" style={{ color: "rgb(18,18,83)" }}>
                 <button className="btn dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Hospitality
                 </button>
@@ -140,9 +146,37 @@ function FirstPage() {
                   <button className="dropdown-item" type="button">Something else here</button>
                 </div>
               </div>
-              
+
             </div>
-            <div className="col-sm-6 text-card secondSec">
+            <div className="col-sm-13 text-card">
+              <Nav className="flex-column pt-2">
+                <p className="ml-3 text-dark mx-3 navileft">Hospitality</p>
+
+                <Nav.Item className="active">
+                  <Nav.Link href="/" className='text-dark' style={{ fontWeight: "bold" }}>
+                    <FontAwesomeIcon icon={faHome} className="mr-2 mx-2" style={{ fontWeight: "bold", color: "rgb(78, 6, 78)" }} onClick={() => navigate('/home')} />
+                    Type
+                  </Nav.Link>
+                </Nav.Item>
+
+                <Nav.Item>
+                  <Nav.Link href="/" className='text-dark' style={{ fontWeight: "bold", textDecoration: "underline" }}>
+                    Find Your Uniform
+                  </Nav.Link>
+                </Nav.Item>
+
+                <Nav.Item>
+                  <Nav.Link href="/" className='text-dark' style={{ fontWeight: "bold", textDecoration: "underline" }}>
+                    Sizing & Fit
+                  </Nav.Link>
+                </Nav.Item>
+
+                <Nav.Item>
+                  <Nav.Link href="/" className='text-dark' style={{ fontWeight: "bold", textDecoration: "underline" }}>
+                    Get Started
+                  </Nav.Link>
+                </Nav.Item>
+              </Nav>
               <div className="card">
                 <div className="card-body" style={{ padding: '2rem' }}>
                   <h1 className="card-title">

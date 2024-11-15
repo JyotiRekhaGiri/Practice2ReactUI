@@ -4,15 +4,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHome,
   faBars,
-  faPaperPlane,
-  faQuestion,
   faTimes,
   faVestPatches,
-  faVest,
   faShirt,
-  faTShirt,
-  faShoePrints,
-  faShoppingCart
+  faShoePrints
 } from "@fortawesome/free-solid-svg-icons";
 import { Nav } from "react-bootstrap";
 import { FaCartPlus, FaSearch, FaUserAlt } from 'react-icons/fa';
