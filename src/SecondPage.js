@@ -4,12 +4,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHome,
   faBars,
-  faBriefcase,
   faPaperPlane,
   faQuestion,
-  faImage,
-  faCopy,
-  faTimes
+  faTimes,
+  faVestPatches,
+  faVest,
+  faShirt,
+  faTShirt,
+  faShoePrints,
+  faShoppingCart
 } from "@fortawesome/free-solid-svg-icons";
 import { Nav } from "react-bootstrap";
 import { FaCartPlus, FaSearch, FaUserAlt } from 'react-icons/fa';
@@ -167,43 +170,129 @@ const SecondPage = () => {
         <div className={`first-half ${isSidebarOpen ? 'open' : ''}`}>
           <FontAwesomeIcon icon={faTimes} className="close-icon" onClick={toggleSidebar} />
           <Nav className="flex-column pt-2">
-            <p className="ml-3 text-light mx-3 font-weight-bold">Uniform Navs</p>
+            <p className="ml-3 text-dark mx-3 navileft">RESOURCES</p>
 
             <Nav.Item className="active">
-              <Nav.Link href="/" className='text-light'>
-                <FontAwesomeIcon icon={faHome} className="mr-2 mx-2" style={{color: "white"}} />
+              <Nav.Link href="/" className='text-dark' style={{ fontWeight: "bold" }}>
+                <FontAwesomeIcon icon={faHome} className="mr-2 mx-2" style={{ fontWeight: "bold", color: "rgb(78, 6, 78)" }} onClick={() => navigate('/home')} />
                 Home
               </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
-              <Nav.Link href="/" className='text-light'>
-                <FontAwesomeIcon icon={faBriefcase} className="mr-2 mx-2" style={{color: "white"}}/>
-                About
+              <Nav.Link href="/" className='text-dark' style={{ fontWeight: "bold" ,textDecoration: "underline"}}>
+                Find Your Uniform
               </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
-              <Nav.Link href="/" className='text-light'>
-                <FontAwesomeIcon icon={faImage} className="mr-2 mx-2" style={{color: "white"}} />
-                Portfolio
+              <Nav.Link href="/" className='text-dark' style={{ fontWeight: "bold", textDecoration: "underline" }}>
+                Sizing & Fit
               </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
-              <Nav.Link href="/" className='text-light'>
-                <FontAwesomeIcon icon={faQuestion} className="mr-2 mx-2" style={{color: "white"}}/>
-                FAQ
-              </Nav.Link>
-            </Nav.Item>
-
-            <Nav.Item>
-              <Nav.Link href="/" className='text-light'>
-                <FontAwesomeIcon icon={faPaperPlane} className="mr-2 mx-2" style={{color: "white"}} />
-                Contact
+              <Nav.Link href="/" className='text-dark' style={{ fontWeight: "bold", textDecoration: "underline" }}>
+                Get Started
               </Nav.Link>
             </Nav.Item>
           </Nav>
+          <hr />
+
+          <div>
+            <Nav className="flex-column pt-2">
+              <p className="ml-3 text-dark mx-3 navileft">DEPARTMENT</p>
+
+              <Nav.Item className="active">
+                <Nav.Link href="/" className='text-dark' style={{ fontWeight: "bold" }}>
+                  <FontAwesomeIcon icon={faShirt} className="mr-2 mx-2" style={{ fontWeight: "bold", color: "rgb(78, 6, 78)" }} onClick={() => navigate('/home')} />
+                  Clothing (288)
+                </Nav.Link>
+              </Nav.Item>
+
+              <Nav.Item>
+                <Nav.Link href="/" className='text-dark' style={{ fontWeight: "bold" }}>
+                  <FontAwesomeIcon icon={faShoePrints} className="mr-2 mx-2" style={{ fontWeight: "bold", color: "rgb(78, 6, 78)" }} onClick={() => navigate('/firstpage')} />
+                  Shoes (12)
+                </Nav.Link>
+              </Nav.Item>
+
+              <Nav.Item>
+                <Nav.Link href="/" className='text-dark' style={{ fontWeight: "bold" }}>
+                  <FontAwesomeIcon icon={faVestPatches} className="mr-2 mx-2" style={{ fontWeight: "bold", color: "rgb(78, 6, 78)" }} onClick={() => navigate('')} />
+                  Accessories (12)
+                </Nav.Link>
+              </Nav.Item>
+
+              <p className="ml-3 text-dark mx-3 navileft">Show More Department filters</p>
+
+            </Nav>
+          </div>
+          <hr />
+
+          <div>
+            <Nav className="flex-column pt-2">
+              <p className="ml-3 text-dark mx-3 navileft">CATEGORY</p>
+
+              <Nav.Item className="active">
+                <Nav.Link href="/" className="text-dark" style={{ fontWeight: "bold", display: "flex", alignItems: "center" }}>
+                  <input type="checkbox" className="mr-2" />
+                  Tops (140)
+                </Nav.Link>
+              </Nav.Item>
+
+              <Nav.Item>
+                <Nav.Link href="/" className="text-dark" style={{ fontWeight: "bold", display: "flex", alignItems: "center" }}>
+                  <input type="checkbox" className="mr-2" />
+                  Bottoms (94)
+                </Nav.Link>
+              </Nav.Item>
+
+              <Nav.Item>
+                <Nav.Link href="/" className="text-dark" style={{ fontWeight: "bold", display: "flex", alignItems: "center" }}>
+                  <input type="checkbox" className="mr-2" />
+                  Outerwear (41)
+                </Nav.Link>
+              </Nav.Item>
+
+              <Nav.Item>
+                <Nav.Link href="/" className="text-dark" style={{ fontWeight: "bold", display: "flex", alignItems: "center" }}>
+                  <input type="checkbox" className="mr-2" />
+                  Dresses (13)
+                </Nav.Link>
+              </Nav.Item>
+
+              <Nav.Item>
+                <Nav.Link href="/" className="text-dark" style={{ fontWeight: "bold", display: "flex", alignItems: "center" }}>
+                  <input type="checkbox" className="mr-2" />
+                  Shoes (12)
+                </Nav.Link>
+              </Nav.Item>
+
+              <Nav.Item>
+                <Nav.Link href="/" className="text-dark" style={{ fontWeight: "bold", display: "flex", alignItems: "center" }}>
+                  <input type="checkbox" className="mr-2" />
+                  Accessories (12)
+                </Nav.Link>
+              </Nav.Item>
+
+              <Nav.Item>
+                <Nav.Link href="/" className="text-dark" style={{ fontWeight: "bold", display: "flex", alignItems: "center" }}>
+                  <input type="checkbox" className="mr-2" />
+                  Backpacks (6)
+                </Nav.Link>
+              </Nav.Item>
+
+              <Nav.Item>
+                <Nav.Link href="/" className="text-dark" style={{ fontWeight: "bold", display: "flex", alignItems: "center" }}>
+                  <input type="checkbox" className="mr-2" />
+                  Socks & Hosiery (3)
+                </Nav.Link>
+              </Nav.Item>
+            </Nav>
+            <p className="ml-3 text-dark mx-3 navileft">Show More Category filters</p>
+          </div>
+
         </div>
 
         <div className='second-half'>
@@ -218,6 +307,10 @@ const SecondPage = () => {
                 {category}
               </button>
             ))}
+          </div>
+
+          <div className='text-center' style={{ marginTop: "rem" }}>
+            <h1>Get back to Hospitality Uniform Types! </h1>
           </div>
 
           <div className="uniform-gallery">

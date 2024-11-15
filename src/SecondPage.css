@@ -28,12 +28,12 @@ body, html {
     border: 1px solid #333;
   }
   
-  .search-input {
+ .search-wrapper .search-input {
     position: relative;
     width: 250px;
   }
   
-  .search-icon {
+  .search-wrapper .search-icon {
     padding-right: 0.4rem;
     align-items: center;
     font-size: 25px;
@@ -58,7 +58,7 @@ body, html {
   
   .category-buttons button {
     padding: 8px 12px;
-    border: 1.5px solid grey;
+    border: 1.5px solid rgb(164, 233, 238);
     background-color: transparent;
     cursor: pointer;
   }
@@ -66,6 +66,7 @@ body, html {
   .category-buttons .active {
     background-color: #239332;
     color: #fff;
+    border: 2px solid rgb(134, 208, 219);
     border-radius: 10px;
   }
   
@@ -205,7 +206,7 @@ body, html {
   .first-half {
     display: block; /* Show sidebar */
     flex: 1.5;
-    background-color: #333;
+    /* background-color: #7b7a7a; */
   }
   
   .menu-icon {
@@ -218,7 +219,7 @@ body, html {
   right: 10px;
   font-size: 1.5em;
   cursor: pointer;
-  color: white;
+  color: rgb(78, 6, 78);
 }
 }
 
@@ -233,24 +234,24 @@ body, html {
     right: 10px;
     font-size: 1.5em;
     cursor: pointer;
-    color: white;
+    color: rgb(78, 6, 78);
   }
   
   /* Sidebar transition */
 .first-half {
   position: fixed;
   top: 0;
-  left: -250px; /* Initially hidden */
+  left: -250px; 
   width: 250px;
-  height: 100%;
-  background-color: #333;
-  color: white;
-  transition: left 0.3s ease; /* Smooth slide transition */
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  transition: left 0.3s ease; 
   z-index: 1000;
 }
 
 .first-half.open {
-  left: 0; /* Move sidebar into view */
+  left: 0; 
 }
   
   .second-half {
@@ -265,9 +266,6 @@ body, html {
   }
 }
 
-/* Nav.Item{
-  color: #fff;
-}
-*/ Nav.Link{
-  color: #fff;
-}
+/* .navileft{
+font-weight: bold;
+} */

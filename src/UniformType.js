@@ -41,6 +41,9 @@ const UniformType = () => {
 
       <div style={{ padding: '5px', margin: '0.3em' }}>
         <FaChevronLeft onClick={() => navigate('/secondpage')} />
+        <span style={{ marginLeft: '10px', fontSize: '1em', color: 'grey' }}>
+          {selectedCategory}
+        </span>
       </div>
 
       {/* Uniform Cards */}
